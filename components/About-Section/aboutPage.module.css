@@ -1,0 +1,168 @@
+.container {
+  width: 100%;
+  max-width: 1201px;
+  display: flex;
+
+  margin-top: 120px;
+  margin-left: 120px;
+
+  opacity: 1;
+
+  border-width: 0px, 0px, 0px, 0px;
+
+  border-style: solid;
+
+  border-color: #fef5d8;
+}
+
+.imageWrap {
+  max-width: 491px;
+  min-height: 523px;
+  max-width: 100%;
+  height: auto;
+  opacity: 1;
+  position: relative;
+}
+
+.imageWrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.content {
+  width: 608px;
+  max-width: 100%;
+  min-height: 423px;
+
+  margin-top: 60px;
+  margin-left: 102px;
+  margin-bottom: 40px;
+
+  opacity: 1;
+}
+
+.label {
+  width: 120px;
+  height: auto;
+
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ff9140;
+}
+
+.content h2 {
+  margin-top: 30px;
+  width: 100%;
+  height: auto;
+
+  font-family: "Source Serif Pro", serif;
+  font-weight: 600;
+  font-size: 46px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+
+.content h2 span {
+  color: #3b6cff;
+}
+
+.content p {
+  margin-top: 20px;
+
+  font-family: "DM Sans", sans-serif;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 30px;
+  color: #142349;
+}
+
+.features {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 24px;
+
+  width: 100%;
+  height: auto;
+  color: #142349;
+
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #142349;
+}
+
+.features div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.features svg {
+  color: #3b6cff;
+}
+
+.btnn {
+  max-width: 147px;
+  min-height: 27px;
+  opacity: 1;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  margin-top: 22px;
+  cursor: pointer;
+}
+
+.readMore {
+  opacity: 1;
+  padding-top: 3px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #5c85ff;
+  margin-top: 35px;
+}
+
+.icon4 {
+  padding-top: 40px;
+  padding-right: 4px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 64px;
+  }
+
+  .imageWrap {
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 32px;
+  }
+
+  .content h2 {
+    font-size: 32px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
