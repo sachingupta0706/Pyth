@@ -37,41 +37,17 @@ const testimonials = [
   },
 ];
 
-// function TestimonialCard({ data }) {
-//   return (
-//     <div className={classes.card}>
-//       <div className={classes.cardAvatar}>
-//         <Image src={data.img} alt={data.name} width={48} height={48} />
-//       </div>
-
-//       <div className={classes.stars}>
-//         {[...Array(5)].map((_, i) =>
-//           i < data.rating ? <MdStar key={i} /> : <MdStarBorder key={i} />,
-//         )}
-//       </div>
-
-//       <p className={classes.text}>{data.text}</p>
-
-//       <div className={classes.author}>
-//         <strong>{data.name}</strong>
-//         <span>{data.role}</span>
-//       </div>
-//     </div>
-//   );
-// }
 function TestimonialCard({ data, className }) {
   return (
     <div className={`${classes.card} ${className}`}>
-      
-      {/* AVATAR ON BORDER */}
       <div className={classes.cardAvatar}>
-        <Image src={data.img} alt={data.name} width={48} height={48} />
+        <Image src={data.img} alt={data.name} width={95} height={64} />
       </div>
 
       <div className={classes.cardBody}>
         <div className={classes.stars}>
           {[...Array(5)].map((_, i) =>
-            i < data.rating ? <MdStar key={i} /> : <MdStarBorder key={i} />
+            i < data.rating ? <MdStar key={i} /> : <MdStarBorder key={i} />,
           )}
         </div>
 
@@ -88,31 +64,27 @@ function TestimonialCard({ data, className }) {
 
 export default function TestimonialSection() {
   return (
-    <section className={classes.wrapper}>
-      <div className={classes.container}>
-        <div className={classes.left}>
-          <span className={classes.label}>TESTIMONIAL</span>
+    <div className={classes.container}>
+      <div className={classes.leftSection}>
+        <div className={classes.labelDiv}>TESTIMONIAL</div>
 
-          <h2 className={classes.heading}>
-            Enhancing Your Smile & <br />
-            <span>Your Confidence</span>
-          </h2>
-
-          <div className={classes.orbit}>
-            <Image src="/Group 37.svg" alt="" width={472} height={410} />
-          </div>
-        </div>
-
-        <div className={classes.cards}>
-          {testimonials.map((item) => (
-            <TestimonialCard key={item.id} data={item} />
-          ))}
+        <div className={classes.headingDiv}>
+          <div className={classes.headingLine}>Enhancing Your Smile &</div>
+          <div className={classes.headingHighlight}>Your Confidence</div>
         </div>
       </div>
-    </section>
+
+      <div className={classes.orbitDiv}>
+        <Image src="/Group 37.svg" alt="Orbit" width={472} height={410} />
+      </div>
+
+      <div className={classes.cardsWrapper}>
+        {testimonials.map((item) => (
+          <div className={classes.cardBox} key={item.id}>
+            <TestimonialCard data={item} />
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
-
-
-
-

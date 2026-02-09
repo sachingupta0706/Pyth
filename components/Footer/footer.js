@@ -32,8 +32,8 @@ export default function Footer() {
                   <Image
                     src="/Latest.svg"
                     alt="Latest"
-                    width={31}
-                    height={31}
+                    width={35}
+                    height={32}
                   />
                 </span>
               </button>
@@ -45,23 +45,23 @@ export default function Footer() {
               <Image
                 src="/INSTAGRAM.svg"
                 alt="Instagram"
-                width={18}
-                height={18}
+                width={41}
+                height={40}
               />
             </Link>
             <Link href="/#">
               <Image
                 src="/FACEBOOK.svg"
                 alt="Facebook"
-                width={18}
-                height={18}
+                width={41}
+                height={40}
               />
             </Link>
             <Link href="/#">
-              <Image src="/LINKDLN.svg" alt="LinkedIn" width={18} height={18} />
+              <Image src="/LINKDLN.svg" alt="LinkedIn" width={41} height={40} />
             </Link>
             <Link href="/#">
-              <Image src="/TWITTER.svg" alt="X" width={18} height={18} />
+              <Image src="/TWITTER.svg" alt="X" width={41} height={40} />
             </Link>
           </div>
         </div>

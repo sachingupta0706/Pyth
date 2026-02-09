@@ -61,32 +61,3 @@
   background: #c2d1ff;
   opacity: 0.3;
 }
-
-@media (max-width: 1024px) {
-  .container {
-    padding: 40px 20px;
-  }
-
-  .number {
-    font-size: 60px;
-  }
-  .label {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 640px) {
-  .container {
-    flex-direction: column;
-    gap: 32px;
-  }
-
-  .divider {
-    width: 60px;
-    height: 1px;
-  }
-
-  .number {
-    font-size: 52px;
-  }
-}
