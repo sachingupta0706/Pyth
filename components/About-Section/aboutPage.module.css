@@ -1,20 +1,16 @@
+/* Desktop = Figma design (unchanged) */
 .container {
   width: 100%;
   max-width: 1201px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-top: 80px;
+  margin-top: 120px;
+  margin-left: 120px;
   opacity: 1;
-  padding: 0 16px;
 }
 
 .imageWrap {
-  flex: 1 1 300px;
-  min-width: 0;
   max-width: 491px;
-  min-height: 300px;
-  height: auto;
+  min-height: 523px;
   opacity: 1;
   position: relative;
 }
@@ -27,12 +23,11 @@
 }
 
 .content {
-  flex: 1 1 300px;
-  min-width: 0;
-  max-width: 608px;
+  width: 608px;
+  max-width: 100%;
   min-height: 423px;
-  margin-top: 0;
-  margin-left: 0;
+  margin-top: 60px;
+  margin-left: 102px;
   margin-bottom: 40px;
   opacity: 1;
 }
@@ -56,7 +51,7 @@
   height: auto;
   font-family: "Source Serif Pro", serif;
   font-weight: 600;
-  font-size: clamp(28px, 5vw, 46px);
+  font-size: 46px;
   line-height: 1.1;
   letter-spacing: 0.02em;
   text-transform: capitalize;
@@ -79,7 +74,7 @@
 .features {
   margin-top: 40px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px 24px;
 
   width: 100%;
@@ -134,10 +129,36 @@
   padding-right: 4px;
 }
 
+@media (max-width: 1024px) {
+  .container {
+    margin-left: 24px;
+  }
+
+  .content {
+    margin-left: 48px;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     margin-top: 60px;
+    margin-left: 0;
+    flex-wrap: wrap;
     gap: 32px;
+    padding: 0 16px;
+  }
+
+  .imageWrap {
+    flex: 1 1 300px;
+    min-width: 0;
+    min-height: 300px;
+  }
+
+  .content {
+    flex: 1 1 300px;
+    min-width: 0;
+    margin-left: 0;
+    margin-top: 0;
   }
 
   .content h2 {

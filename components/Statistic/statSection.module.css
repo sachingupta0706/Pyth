@@ -1,14 +1,13 @@
+/* Desktop = Figma design (unchanged) */
 .container {
   max-width: 1320px;
-  min-height: 200px;
+  min-height: 292px;
   width: 100%;
-  margin-top: 80px;
-  padding: 40px 24px;
+  margin-top: 120px;
+  margin-left: 60px;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
   border: 1px solid #fff;
   border-radius: 20px;
   background: #ffffff;
@@ -16,8 +15,7 @@
 }
 
 .item {
-  flex: 1 1 120px;
-  min-width: 100px;
+  flex: 1;
   text-align: center;
 }
 
@@ -29,8 +27,8 @@
 .number {
   font-family: "Source Serif Pro", serif;
   font-weight: 600;
-  font-size: clamp(48px, 10vw, 113px);
-  line-height: 1;
+  font-size: 113px;
+  line-height: 92px;
   letter-spacing: 0.02em;
   text-align: center;
   text-transform: capitalize;
@@ -48,7 +46,7 @@
   margin-top: 8px;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 600;
-  font-size: clamp(12px, 1.5vw, 19px);
+  font-size: 19px;
   line-height: 1.4;
   letter-spacing: 0.03em;
   text-align: center;
@@ -58,16 +56,26 @@
 
 .divider {
   width: 1px;
-  height: 80px;
+  height: 124px;
   background: #c2d1ff;
   opacity: 0.3;
+}
+
+/* Responsive only */
+@media (max-width: 1280px) {
+  .container {
+    margin-left: 24px;
+  }
 }
 
 @media (max-width: 768px) {
   .container {
     margin-top: 60px;
+    margin-left: 0;
     padding: 32px 16px;
+    flex-wrap: wrap;
     gap: 16px;
+    min-height: auto;
   }
 
   .divider {
@@ -76,6 +84,15 @@
 
   .item {
     flex: 1 1 45%;
+  }
+
+  .number {
+    font-size: 72px;
+    line-height: 1;
+  }
+
+  .label {
+    font-size: 16px;
   }
 }
 

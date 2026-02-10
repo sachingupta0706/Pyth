@@ -1,15 +1,17 @@
+/* Desktop = Figma design (unchanged) */
 .section {
   width: 100%;
   max-width: 1200px;
   min-height: 140px;
   opacity: 1;
-  margin-top: 60px;
-  padding: 0 16px;
+  margin-top: 120px;
+  margin-left: 120px;
 }
 
 .label {
   opacity: 1;
-  margin-bottom: 40px;
+  margin-left: 467px;
+  margin-bottom: 60px;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 700;
   font-size: 19px;
@@ -17,58 +19,84 @@
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #ff9140;
-  text-align: center;
 }
 
 .container {
   max-width: 1200px;
   min-height: 56px;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .list {
   display: flex;
-  flex-wrap: wrap;
   list-style: none;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
   margin: 0;
   padding: 0;
 }
 
-.list1,
-.list2,
-.list3,
-.list4,
-.list5 {
-  flex: 0 1 auto;
-  max-width: 200px;
+.list1 {
+  width: 200px;
   height: 54px;
   opacity: 1;
+  margin-right: 42px;
 }
 
-.list1 img,
-.list2 img,
-.list3 img,
-.list4 img,
-.list5 img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+.list2 {
+  width: 208px;
+  height: 54px;
+  opacity: 1;
+  margin-right: 42px;
+}
+
+.list3 {
+  width: 200px;
+  height: 54px;
+  opacity: 1;
+  margin-right: 42px;
+}
+
+.list4 {
+  width: 208px;
+  height: 54px;
+  opacity: 1;
+  margin-right: 42px;
+}
+
+.list5 {
+  width: 216px;
+  height: 54px;
+  margin-right: 42px;
+}
+
+/* Responsive only */
+@media (max-width: 1280px) {
+  .section {
+    margin-left: 48px;
+  }
+
+  .label {
+    margin-left: 0;
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
   .section {
     margin-top: 48px;
+    margin-left: 0;
+    padding: 0 16px;
   }
 
   .label {
     font-size: 16px;
     margin-bottom: 32px;
+    margin-left: 0;
+    text-align: center;
   }
 
   .list {
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
   }
 
@@ -77,8 +105,20 @@
   .list3,
   .list4,
   .list5 {
+    width: auto;
     max-width: 140px;
     height: 40px;
+    margin-right: 0;
+  }
+
+  .list1 img,
+  .list2 img,
+  .list3 img,
+  .list4 img,
+  .list5 img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }
 

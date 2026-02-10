@@ -1,23 +1,22 @@
+/* Desktop = Figma design (unchanged) */
 .footer {
   background: #eaf9ff;
   padding: 56px 16px;
-  margin-top: 80px;
+  margin-top: 120px;
 }
 
 .container {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 16px;
 }
 
 .top {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 32px;
-  flex-wrap: wrap;
-  margin-left: 0;
+  margin-left: 120px;
 }
 
 .brand {
@@ -76,8 +75,8 @@
 .socials {
   display: flex;
   gap: 20px;
-  padding-right: 0;
-  padding-top: 0;
+  padding-right: 120px;
+  padding-top: 50px;
 }
 
 .socials a {
@@ -94,8 +93,8 @@
   background: #cfe8f3;
   margin: 32px 0;
   color: #c2d1ff;
-  max-width: 100%;
-  margin-left: 0;
+  max-width: 1190px;
+  margin-left: 120px;
 }
 
 .line1 {
@@ -108,14 +107,11 @@
 .bottom {
   display: flex;
   gap: 48px;
-  flex-wrap: wrap;
-  margin-left: 0;
+  margin-left: 120px;
 }
 
 .hours {
-  min-width: 0;
-  width: 100%;
-  max-width: 360px;
+  min-width: 360px;
 }
 
 .hours h4 {
@@ -145,12 +141,31 @@
 
 .links {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 32px 48px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
   flex: 1;
-  min-width: 0;
   font-family: "Plus Jakarta Sans", sans-serif;
   line-height: 1.8;
+}
+
+/* Responsive only */
+@media (max-width: 1280px) {
+  .top {
+    margin-left: 24px;
+  }
+
+  .socials {
+    padding-right: 24px;
+  }
+
+  .line {
+    margin-left: 24px;
+    max-width: 100%;
+  }
+
+  .bottom {
+    margin-left: 24px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -161,6 +176,13 @@
 
   .top {
     flex-direction: column;
+    margin-left: 0;
+    align-items: flex-start;
+  }
+
+  .socials {
+    padding-right: 0;
+    padding-top: 0;
   }
 
   .subscribe {
@@ -168,9 +190,20 @@
     max-width: 289px;
   }
 
+  .line {
+    margin-left: 0;
+  }
+
   .bottom {
     flex-direction: column;
     gap: 32px;
+    margin-left: 0;
+    flex-wrap: wrap;
+  }
+
+  .hours {
+    min-width: 0;
+    max-width: 100%;
   }
 
   .links {

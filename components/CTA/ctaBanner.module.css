@@ -1,14 +1,14 @@
+/* Desktop = Figma design (unchanged) */
 .bannerContainer {
   width: 100%;
   max-width: 1320px;
-  min-height: auto;
-  margin-top: 80px;
-  padding: 0 24px;
+  min-height: 559px;
+  margin-top: 120px;
+  margin-left: 60px;
 }
 
 .container {
   display: flex;
-  flex-wrap: wrap;
   max-width: 1320px;
   width: 100%;
   min-height: 499px;
@@ -16,19 +16,14 @@
   border-radius: 25px;
   background: #c7f0fd;
   box-shadow: 0 0 25.9px rgba(14, 41, 81, 0.06);
-  overflow: hidden;
 }
 
 .content {
-  flex: 1 1 300px;
-  min-width: 0;
   max-width: 616px;
   min-height: 383px;
   opacity: 1;
   margin-top: 60px;
   margin-left: 60px;
-  padding-right: 24px;
-  padding-bottom: 24px;
 }
 
 .textt{
@@ -69,7 +64,7 @@ min-height: 233px;
   font-weight: 600;
   max-width: 616px;
   opacity: 1;
-  font-size: clamp(32px, 6vw, 76px);
+  font-size: 76px;
   line-height: 1.1;
   letter-spacing: -0.04em;
   text-transform: capitalize;
@@ -80,7 +75,7 @@ min-height: 233px;
   color: #4466ff;
   font-family: "Source Serif Pro", serif;
   font-weight: 600;
-  font-size: clamp(28px, 5vw, 72px);
+  font-size: 72px;
   line-height: 1;
   letter-spacing: 0.02em;
   text-transform: capitalize;
@@ -93,7 +88,7 @@ min-height: 233px;
   font-weight: 600;
   max-width: 616px;
   opacity: 1;
-  font-size: clamp(32px, 6vw, 76px);
+  font-size: 76px;
   line-height: 1.1;
   letter-spacing: -0.04em;
   text-transform: capitalize;
@@ -101,8 +96,8 @@ min-height: 233px;
 }
 
 .description {
-  max-width: 553px;
-  min-height: 60px;
+  width: 553px;
+  height: 60px;
   opacity: 1;
   font-family: "DM Sans", sans-serif;
   font-weight: 300;
@@ -165,31 +160,44 @@ padding-left: 28px;
 
 
 .imageWrapper {
-  flex: 1 1 300px;
-  min-height: 300px;
+  flex: 1;
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-end;
   position: relative;
 }
 
 .doctorImage {
   max-width: 390px;
-  width: 100%;
-  height: auto;
-  position: relative;
+  min-height: 559px;
+  width: auto;
+  position: absolute;
   bottom: 0;
+  right: 60px;
+}
+
+@media (max-width: 1280px) {
+  .bannerContainer {
+    margin-left: 24px;
+  }
 }
 
 @media (max-width: 768px) {
   .bannerContainer {
     margin-top: 60px;
+    margin-left: 0;
     padding: 0 16px;
+  }
+
+  .container {
+    flex-wrap: wrap;
+    overflow: hidden;
   }
 
   .content {
     margin-left: 24px;
     margin-top: 40px;
+    flex: 1 1 100%;
   }
 
   .subTitle {
@@ -208,6 +216,22 @@ padding-left: 28px;
   .description {
     font-size: 16px;
     line-height: 1.5;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .imageWrapper {
+    min-height: 300px;
+    justify-content: center;
+  }
+
+  .doctorImage {
+    position: relative;
+    right: 0;
+    width: 100%;
+    max-width: 390px;
+    height: auto;
+    min-height: 0;
   }
 }
 

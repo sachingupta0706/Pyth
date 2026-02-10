@@ -1,19 +1,21 @@
+/* Desktop = Figma design (unchanged) */
 .container {
   max-width: 1320px;
   width: 100%;
-  min-height: auto;
+  min-height: 1156px;
   opacity: 1;
   border-radius: 25px;
-  margin-top: 80px;
+  margin-top: 120px;
   background: #eff6ff;
-  padding: 60px 24px 80px;
+  margin-left: 60px;
 }
 
 .textcontainer {
   max-width: 491px;
   min-height: 170px;
-  margin: 0 auto;
-  padding-top: 40px;
+  padding-top: 100px;
+  margin-left: 415px;
+  margin-right: 414px;
   gap: 30px;
 }
 
@@ -48,8 +50,8 @@
 .tx1 {
   font-family: "Source Serif Pro", serif;
   font-weight: 600;
-  font-size: clamp(28px, 4vw, 46px);
-  line-height: 1.2;
+  font-size: 46px;
+  line-height: 1;
   letter-spacing: 0.02em;
   text-align: center;
   text-transform: capitalize;
@@ -61,8 +63,8 @@
 .tx2 {
   font-family: "Source Serif Pro", serif;
   font-weight: 600;
-  font-size: clamp(28px, 4vw, 46px);
-  line-height: 1.2;
+  font-size: 46px;
+  line-height: 1;
   letter-spacing: 0.02em;
   text-align: center;
   text-transform: capitalize;
@@ -77,7 +79,7 @@
   color: #4d7cff;
   font-family: "Source Serif Pro", serif;
   font-weight: 600;
-  font-size: clamp(28px, 4vw, 46px);
+  font-size: 46px;
   line-height: 1;
   letter-spacing: 0.02em;
   text-align: center;
@@ -86,36 +88,35 @@
 
 .container1 {
   max-width: 1201px;
-  width: 100%;
-  min-height: auto;
+  min-height: 706px;
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
-  margin-left: 0;
+  margin-top: 80px;
+  margin-left: 60px;
 }
 
 .rowTwo {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
 }
 
 .rowThree {
-  margin-top: 24px;
+  margin-top: 40px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(3, 374px);
+  gap: 40px;
 }
 
 .rowThree > .card {
-  width: 100%;
-  min-height: 333px;
+  width: 374px;
+  height: 333px;
   border-radius: 15px;
   box-shadow: 0px 0px 20.4px rgba(50, 85, 137, 0.05);
 }
 
 .largeCard {
-  max-width: 100%;
+  max-width: 580px;
   min-height: 333px;
   border-radius: 15px;
 }
@@ -127,18 +128,14 @@
 .card {
   background: #ffffff;
   border-radius: 12px;
-  min-width: 0;
-  overflow: hidden;
 }
 
 .box11 {
-  width: 100%;
-  max-width: 497px;
-  min-height: 200px;
+  width: 497px;
+  height: 277px;
   opacity: 1;
   margin-top: 30px;
   margin-left: 30px;
-  padding-right: 16px;
 }
 
 .img12 {
@@ -147,63 +144,118 @@
 }
 
 .content {
-  width: 100%;
-  max-width: 497px;
-  min-height: 161px;
+  width: 497px;
+  height: 161px;
   opacity: 1;
   margin-top: 30px;
 }
 
 .rowThree > .card:nth-child(n) .content {
-  width: 100%;
-  max-width: 273px;
-  min-height: 161px;
+  width: 273px;
+  height: 161px;
   opacity: 1;
   margin-top: 30px;
 }
 
 .rowTwo > .card:first-child .txt {
-  width: 100%;
-  max-width: 497px;
-  min-height: 104px;
+  width: 497px;
+  height: 104px;
   opacity: 1;
   margin-bottom: 30px;
 }
 
 .rowThree > .card:nth-child(n) .txt {
-  width: 100%;
-  max-width: 273px;
-  min-height: 104px;
+  width: 273px;
+  height: 104px;
   opacity: 1;
   margin-bottom: 30px;
 }
 
 .rowThree > .card:nth-child(n) .box11 {
-  width: 100%;
-  max-width: 273px;
-  min-height: 200px;
+  width: 273px;
+  height: 277px;
   opacity: 1;
   margin-top: 30px;
   margin-left: 30px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
   .container {
-    margin-top: 60px;
-    padding: 40px 16px 60px;
+    margin-left: 24px;
   }
 
   .textcontainer {
-    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container1 {
+    margin-left: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 60px;
+    margin-left: 0;
+    padding: 40px 16px 60px;
+    min-height: auto;
+  }
+
+  .textcontainer {
+    padding-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .subTitle {
     font-size: 16px;
   }
 
+  .tx1,
+  .tx2,
+  .blueText {
+    font-size: 32px;
+  }
+
+  .container1 {
+    margin-left: 0;
+  }
+
+  .rowTwo {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .rowThree {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .rowThree > .card,
+  .largeCard {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 333px;
+  }
+
   .box11,
   .rowThree > .card:nth-child(n) .box11 {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 200px;
     margin-left: 16px;
+  }
+
+  .content,
+  .rowThree > .card:nth-child(n) .content,
+  .rowTwo > .card:first-child .txt,
+  .rowThree > .card:nth-child(n) .txt,
+  .rowTwo > .card:nth-child(2) .txt {
+    width: 100%;
+    max-width: 100%;
   }
 }
 

@@ -1,20 +1,17 @@
+/* Desktop = Figma design (unchanged) */
 .container {
   max-width: 1200px;
-  width: 100%;
-  min-height: auto;
-  margin-top: 80px;
-  padding: 0 24px;
+  min-height: 706px;
+  margin-top: 120px;
+  margin-left: 120px;
   opacity: 1;
 }
 
 .heading {
   max-width: 616px;
-  width: 100%;
-  min-height: auto;
+  height: 170px;
   opacity: 1;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  margin-left: 292px;
 }
 
 .tag {
@@ -32,14 +29,13 @@
 }
 
 .text {
-  width: 100%;
-  max-width: 616px;
-  min-height: auto;
+  width: 616px;
+  height: 116px;
   opacity: 1;
   font-family: "Source Serif Pro", serif;
   font-weight: 600;
-  font-size: clamp(28px, 4vw, 46px);
-  line-height: 1.2;
+  font-size: 46px;
+  line-height: 1;
   letter-spacing: 0.02em;
   text-align: center;
   text-transform: capitalize;
@@ -49,8 +45,8 @@
 .span1 {
   font-family: "Source Serif Pro", serif;
   font-weight: 600;
-  font-size: clamp(28px, 4vw, 46px);
-  line-height: 1.2;
+  font-size: 46px;
+  line-height: 1;
   letter-spacing: 0.02em;
   padding-top: 12px;
   text-align: center;
@@ -86,23 +82,17 @@
 
 .cardsWrapper {
   max-width: 1036px;
-  width: 100%;
   min-height: 382px;
-  margin-top: 60px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 80px;
+  margin-left: 82px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
+  justify-content: space-between;
   align-items: flex-end;
 }
 
 .card {
-  width: 100%;
-  max-width: 320px;
-  min-width: 0;
-  min-height: 352px;
+  width: 320px;
+  height: 352px;
   border-radius: 15px;
   background: #eaf6ff;
   border: 1px solid #ffffff;
@@ -113,20 +103,14 @@
 }
 
 .image1 {
-  width: 100%;
-  max-width: 289px;
-  height: auto;
+  width: 289px;
+  height: 274px;
   opacity: 1;
   border-radius: 15px;
   border: 1px solid #fef5d8;
   margin-top: 15px;
   padding-right: 15px;
   overflow: hidden;
-}
-
-.image1 img {
-  width: 100%;
-  height: auto;
 }
 
 .activeCard {
@@ -136,38 +120,34 @@
 .cardsWrapper .card:first-child .cardInfo1 {
   background: white;
   margin-top: -45px;
-  width: calc(100% - 32px);
-  max-width: 258px;
-  min-height: 92px;
+  width: 258px;
+  height: 92px;
   opacity: 1;
   border-radius: 10px;
   box-shadow: 0 0 22.8px rgba(74, 110, 165, 0.31);
   margin-left: 16px;
-  margin-right: 16px;
-  padding: 0 8px;
-  box-sizing: border-box;
+  margin-right: 15px;
 }
 
 .cardsWrapper .card:first-child .cardInfo1 .text21 {
-  max-width: 100%;
-  min-height: 24px;
+  max-width: 219px;
+  height: 24px;
   opacity: 1;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 600;
-  font-size: clamp(15px, 2.2vw, 19px);
-  line-height: 1.2;
+  font-size: 19px;
+  line-height: 1;
   letter-spacing: 0.15em;
-  padding-left: 12px;
-  padding-right: 8px;
+  padding-left: 20px;
   text-transform: capitalize;
   color: #3366ff;
+  white-space: nowrap;
   margin-top: 20px;
-  word-break: break-word;
 }
 
 .cardsWrapper .card:first-child .cardInfo1 .desc {
-  width: auto;
-  min-height: 20px;
+  width: 110px;
+  height: 20px;
   opacity: 1;
   font-family: "DM Sans", sans-serif;
   font-weight: 300;
@@ -176,46 +156,41 @@
   letter-spacing: 0.02em;
   color: #142349;
   margin-top: 8px;
-  margin-left: 12px;
-  padding-bottom: 12px;
+  margin-left: 73px;
 }
 
 .cardsWrapper .card:nth-child(2) .cardInfo2 {
-  width: calc(100% - 32px);
-  max-width: 258px;
-  min-height: 152px;
+  width: 258px;
+  height: 152px;
   opacity: 1;
   border-radius: 10px;
   box-shadow: 0px 0px 22.8px 0px #4a6ea54f;
   background: white;
   margin-top: -105px;
   margin-left: 16px;
-  margin-right: 16px;
-  padding: 0 8px;
-  box-sizing: border-box;
+  margin-right: 15px;
 }
 
 .cardsWrapper .card:nth-child(2) .cardInfo2 .text22 {
-  max-width: 100%;
+  max-width: 191px;
   min-height: 24px;
   opacity: 1;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 600;
-  font-size: clamp(15px, 2.2vw, 19px);
-  line-height: 1.2;
+  font-size: 19px;
+  line-height: 1;
   letter-spacing: 0.15em;
   text-align: center;
   text-transform: capitalize;
+  white-space: nowrap;
   color: #3366ff;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 33px;
   margin-top: 20px;
-  word-break: break-word;
 }
 
 .cardsWrapper .card:nth-child(2) .cardInfo2 .desc1 {
-  width: auto;
-  min-height: 20px;
+  width: 110px;
+  height: 20px;
   opacity: 1;
   font-family: "DM Sans", sans-serif;
   font-weight: 300;
@@ -224,63 +199,53 @@
   letter-spacing: 0.02em;
   color: #142349;
   margin-top: 8px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  padding-bottom: 8px;
+  margin-left: 73px;
 }
 
 .socials {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 100%;
+  max-width: 215px;
   min-height: 40px;
   opacity: 1;
   margin-top: 20px;
-  margin-left: 0;
-  gap: 8px;
+  margin-left: 20px;
 }
 
 .socials span {
-  padding-right: 0;
+  padding-right: 17px;
 }
 
 .cardsWrapper .card:nth-child(3) .cardInfo1 {
   background: white;
   margin-top: -45px;
-  width: calc(100% - 32px);
-  max-width: 258px;
-  min-height: 92px;
+  width: 258px;
+  height: 92px;
   opacity: 1;
   border-radius: 10px;
   box-shadow: 0 0 22.8px rgba(74, 110, 165, 0.31);
   margin-left: 16px;
-  margin-right: 16px;
-  padding: 0 8px;
-  box-sizing: border-box;
+  margin-right: 15px;
 }
 
 .cardsWrapper .card:nth-child(3) .cardInfo1 .text21 {
-  max-width: 100%;
-  min-height: 24px;
+  max-width: 219px;
+  height: 24px;
   opacity: 1;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 600;
-  font-size: clamp(15px, 2.2vw, 19px);
-  line-height: 1.2;
+  font-size: 19px;
+  line-height: 1;
   letter-spacing: 0.15em;
-  padding-left: 12px;
-  padding-right: 8px;
+  padding-left: 20px;
   text-transform: capitalize;
   color: #3366ff;
+  white-space: nowrap;
   margin-top: 20px;
-  word-break: break-word;
 }
 
 .cardsWrapper .card:nth-child(3) .cardInfo1 .desc {
-  width: auto;
-  min-height: 20px;
+  width: 110px;
+  height: 20px;
   opacity: 1;
   font-family: "DM Sans", sans-serif;
   font-weight: 300;
@@ -289,19 +254,16 @@
   letter-spacing: 0.02em;
   color: #142349;
   margin-top: 8px;
-  margin-left: 12px;
-  padding-bottom: 12px;
+  margin-left: 73px;
 }
 
 .button1 {
   max-width: 1200px;
-  width: 100%;
   min-height: 40px;
-  margin-top: 24px;
+  margin-top: -180px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 16px;
+  justify-content: space-between;
 }
 
 .A,
@@ -314,10 +276,39 @@
   width: 142px;
   height: 13px;
   opacity: 1;
-  margin-top: 24px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+  padding-top: 186px;
+  padding-left: 530px;
+}
+
+/* Responsive only */
+@media (max-width: 1280px) {
+  .container {
+    margin-left: 24px;
+  }
+
+  .heading {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .cardsWrapper {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .button1 {
+    margin-top: 24px;
+    justify-content: center;
+  }
+
+  .slider {
+    padding: 24px 0 0 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (max-width: 900px) {
@@ -326,20 +317,71 @@
   }
 
   .cardsWrapper {
+    flex-wrap: wrap;
     align-items: stretch;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .container {
     margin-top: 60px;
+    margin-left: 0;
     padding: 0 16px;
   }
 
   .heading {
-    margin-top: 0;
+    margin-left: auto;
   }
 
+  .text,
+  .span1 {
+    font-size: 32px;
+  }
+
+  .cardsWrapper {
+    margin-top: 40px;
+    gap: 24px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .image1 {
+    width: 100%;
+    max-width: 289px;
+    height: auto;
+  }
+
+  .image1 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .cardsWrapper .card:first-child .cardInfo1,
+  .cardsWrapper .card:nth-child(2) .cardInfo2,
+  .cardsWrapper .card:nth-child(3) .cardInfo1 {
+    width: calc(100% - 32px);
+    max-width: 258px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cardsWrapper .card:first-child .cardInfo1 .text21,
+  .cardsWrapper .card:nth-child(3) .cardInfo1 .text21 {
+    white-space: normal;
+  }
+
+  .socials {
+    margin-left: auto;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
   .tag {
     font-size: 16px;
   }
@@ -347,23 +389,6 @@
   .text,
   .span1 {
     font-size: 24px;
-  }
-
-  .cardsWrapper {
-    margin-top: 40px;
-    gap: 32px;
-  }
-
-  .card {
-    max-width: 100%;
-  }
-
-  .cardsWrapper .card:first-child .cardInfo1,
-  .cardsWrapper .card:nth-child(2) .cardInfo2,
-  .cardsWrapper .card:nth-child(3) .cardInfo1 {
-    width: calc(100% - 24px);
-    margin-left: 12px;
-    margin-right: 12px;
   }
 }
 
@@ -375,9 +400,5 @@
   .text,
   .span1 {
     font-size: 20px;
-  }
-
-  .cardsWrapper .card:nth-child(2) .cardInfo2 {
-    margin-top: -80px;
   }
 }
