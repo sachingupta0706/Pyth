@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
 *,
@@ -38,7 +38,7 @@ body {
   background: #eff6ff;
 }
 
-/* Responsive: only from here down – desktop (Figma) unchanged above */
+
 @media (max-width: 1280px) {
   .container {
     padding: 0 48px;
@@ -70,4 +70,73 @@ body {
     max-width: 100%;
     height: auto;
   }
+} */
+
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "DM Sans", sans-serif;
+  font-family: "Source Serif Pro", serif;
+
+  background: #ffffff;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Responsive overrides only - desktop CSS unchanged */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  .mainheader {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+.mainheader {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 1041px;
+  opacity: 1;
+  background: #eff6ff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

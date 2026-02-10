@@ -1,6 +1,9 @@
 .mainheader {
   width: 100%;
 
+  max-width: 1440px;
+  min-height: 1041px;
+
   opacity: 1;
   background: #eff6ff;
 }
@@ -9,62 +12,52 @@
   width: 100%;
   max-width: 1440px;
   min-height: 76px;
+
   display: flex;
   opacity: 1;
+
   padding-top: 16px;
-  padding-bottom: 16px;
   border-bottom: 1px solid #c2d1ff;
-  position: relative;
 }
 
 .ContainerLogo {
   display: flex;
-  max-width: 163px;
+  width: 163px;
+  height: 44px;
+
   opacity: 1;
+
+  margin-left: 120px;
+
   gap: 8px;
-  position: absolute;
-  left: 120px;
-}
-
-.headerRight {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  position: absolute;
-  right: 120px;
-}
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 40px;
-  height: 40px;
-  padding: 8px;
-  background: #3366ff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.hamburgerLine {
-  width: 100%;
-  height: 2px;
-  background: #fff;
-  border-radius: 1px;
-  transition: transform 0.2s, opacity 0.2s;
 }
 
 .ImageLogo {
+  width: 42px;
+  height: 42px;
+
   opacity: 1;
+
+  .box {
+    border: 0.25px solid;
+    border-image: linear-gradient(88.28deg, #001c81 22.65%, #3359df 107.65%) 1;
+  }
 }
 
 .TextLogo {
+  display: flex;
+  flex-direction: column;
+
+  width: 111px;
+  height: 44px;
+
   opacity: 1;
 }
 
 .brand {
+  width: 111px;
+  height: 28px;
+
   opacity: 1;
 
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -72,8 +65,9 @@
   font-weight: 600;
 
   font-size: 22px;
-  line-height: 1;
-  margin-top: 3px;
+  left: 170px;
+  line-height: 100%;
+  padding-top: 3px;
 
   letter-spacing: 0.04em;
   text-transform: capitalize;
@@ -81,7 +75,12 @@
 }
 
 .sub {
+  width: 111px;
+  height: 16px;
+
   opacity: 1;
+
+  padding-bottom: 2px;
 
   font-family: "DM Sans", sans-serif;
   font-weight: 500;
@@ -97,14 +96,20 @@
 
 .info {
   display: flex;
+  width: 410px;
+  height: 24px;
+
   opacity: 1;
-  gap: 40px;
-  position: absolute;
-  left: 675px;
   margin-top: 8px;
+  margin-bottom: 12px;
+  margin-left: 392px;
+
+  gap: 40px;
 }
 
 .location {
+  width: 195px;
+  height: 24px;
   display: flex;
   opacity: 1;
   gap: 12px;
@@ -115,11 +120,19 @@
 
 .icon1 {
   color: #142349;
+  width: 19px;
+  height: 24px;
 
   opacity: 1;
 }
 
 .text1 {
+  width: 164px;
+  height: 20px;
+
+  padding-top: 2px;
+  padding-bottom: 2px;
+
   opacity: 1;
   font-family: "DM Sans", sans-serif;
   font-weight: 300;
@@ -132,23 +145,25 @@
 }
 
 .phone {
+  width: 175px;
+  height: 24px;
   display: flex;
   opacity: 1;
   gap: 12px;
 }
 
 .icon2 {
-  max-width: 24px;
-  min-height: 24px;
+  width: 24px;
+  height: 24px;
 
   opacity: 1;
 }
 
 .text2 {
-  max-width: 139px;
-  min-height: 20px;
+  width: 139px;
+  height: 20px;
 
-  padding-top: 7px;
+  padding-top: 4px;
   padding-bottom: 2px;
 
   opacity: 1;
@@ -164,10 +179,13 @@
 }
 
 .button {
-  max-width: 186px;
-  min-height: 40px;
+  width: 186px;
+  height: 40px;
   opacity: 1;
   border: none;
+
+  margin-left: 49px;
+  margin-right: 120px;
   gap: 10px;
   border-radius: 192px;
   padding-top: 10.5px;
@@ -176,6 +194,7 @@
   padding-left: 28px;
   background: #3366ff;
   cursor: pointer;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -189,8 +208,8 @@
 }
 
 .textbtn {
-  max-width: 130px;
-  min-height: 19px;
+  width: 130px;
+  height: 19px;
   opacity: 1;
 
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -205,7 +224,6 @@
   padding-top: 3px;
 }
 
-/* !! Navbar */
 .Navbar {
   width: 100%;
   max-width: 1200px;
@@ -303,7 +321,6 @@
   background: #3366ff;
 }
 
-/* !! Hero */
 .hero {
   display: flex;
   max-width: 1722px;
@@ -505,7 +522,6 @@
   transform: scale(1.2);
 }
 
-/* ========== RESPONSIVE ONLY – desktop (Figma) unchanged above ========== */
 @media (max-width: 1280px) {
   .ContainerLogo {
     left: 48px;
