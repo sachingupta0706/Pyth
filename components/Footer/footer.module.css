@@ -1,20 +1,23 @@
 .footer {
   background: #eaf9ff;
   padding: 56px 16px;
-  margin-top: 120px;
+  margin-top: 80px;
 }
 
 .container {
   max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 .top {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 32px;
   flex-wrap: wrap;
-  margin-left: 120px;
+  margin-left: 0;
 }
 
 .brand {
@@ -73,8 +76,8 @@
 .socials {
   display: flex;
   gap: 20px;
-  padding-right: 120px;
-  padding-top: 50px;
+  padding-right: 0;
+  padding-top: 0;
 }
 
 .socials a {
@@ -91,8 +94,8 @@
   background: #cfe8f3;
   margin: 32px 0;
   color: #c2d1ff;
-  max-width: 1190px;
-  margin-left: 120px;
+  max-width: 100%;
+  margin-left: 0;
 }
 
 .line1 {
@@ -106,11 +109,13 @@
   display: flex;
   gap: 48px;
   flex-wrap: wrap;
-  margin-left: 120px;
+  margin-left: 0;
 }
 
 .hours {
-  min-width: 360px;
+  min-width: 0;
+  width: 100%;
+  max-width: 360px;
 }
 
 .hours h4 {
@@ -140,11 +145,84 @@
 
 .links {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 48px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 32px 48px;
   flex: 1;
+  min-width: 0;
   font-family: "Plus Jakarta Sans", sans-serif;
   line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 16px;
+    margin-top: 60px;
+  }
+
+  .top {
+    flex-direction: column;
+  }
+
+  .subscribe {
+    width: 100%;
+    max-width: 289px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 32px 16px;
+    margin-top: 40px;
+  }
+
+  .links {
+    grid-template-columns: 1fr;
+  }
+
+  .logo h3 {
+    font-size: 16px;
+  }
+
+  .logo span {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 380px) {
+  .footer {
+    padding: 24px 12px;
+    margin-top: 32px;
+  }
+
+  .container {
+    padding: 0 0;
+  }
+
+  .subscribe {
+    max-width: 100%;
+  }
+
+  .subscribe input {
+    width: 100%;
+    max-width: 180px;
+  }
+
+  .logo h3 {
+    font-size: 15px;
+  }
+
+  .logo span {
+    font-size: 10px;
+  }
 }
 
 .links h4 {

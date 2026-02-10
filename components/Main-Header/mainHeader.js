@@ -1,10 +1,12 @@
+"use client";
 import Image from "next/image";
-
 import Link from "next/link";
-
+import { useState } from "react";
 import classes from "./mainHeader.module.css";
 
 export default function MainHeader() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
       <div className={classes.wrapper}>
@@ -23,7 +25,6 @@ export default function MainHeader() {
             <span className={classes.icon1}>
               <Image src="/location1.svg" alt="loca" width={19} height={24} />
             </span>
-
             <span className={classes.text1}>St. Sanguin Number 40</span>
           </div>
           <div className={classes.phone}>
@@ -34,42 +35,55 @@ export default function MainHeader() {
           </div>
         </div>
 
-        <Link href="/#" className={classes.button}>
-          <span className={classes.textbtn}>APPOINTMENT</span>
-        </Link>
+        <div className={classes.headerRight}>
+          <Link href="/#" className={classes.button}>
+            <span className={classes.textbtn}>APPOINTMENT</span>
+          </Link>
+          <button
+            type="button"
+            className={classes.hamburger}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+          >
+            <span className={classes.hamburgerLine} />
+            <span className={classes.hamburgerLine} />
+            <span className={classes.hamburgerLine} />
+          </button>
+        </div>
       </div>
 
-      <nav className={classes.Navbar}>
+      <nav className={`${classes.Navbar} ${menuOpen ? classes.NavbarOpen : ""}`}>
         <ul className={classes.menu}>
           <li>
-            <Link className={classes.active} href="/">
+            <Link className={classes.active} href="/" onClick={() => setMenuOpen(false)}>
               Home
             </Link>
           </li>
           <li>
-            <Link className={classes.link} href="/#">
+            <Link className={classes.link} href="/#" onClick={() => setMenuOpen(false)}>
               About Us
             </Link>
           </li>
           <li>
-            <Link className={classes.link} href="/#">
+            <Link className={classes.link} href="/#" onClick={() => setMenuOpen(false)}>
               Services
             </Link>
           </li>
           <li>
-            <Link className={classes.link} href="/#">
+            <Link className={classes.link} href="/#" onClick={() => setMenuOpen(false)}>
               Pages
               <Image src="/Arrow.svg" alt="" width={13} height={14} />
             </Link>
           </li>
           <li>
-            <Link className={classes.link} href="/#">
+            <Link className={classes.link} href="/#" onClick={() => setMenuOpen(false)}>
               Blog
               <Image src="/Arrow.svg" alt="" width={13} height={14} />
             </Link>
           </li>
           <li>
-            <Link className={classes.link} href="/#">
+            <Link className={classes.link} href="/#" onClick={() => setMenuOpen(false)}>
               Contact
             </Link>
           </li>
@@ -81,7 +95,6 @@ export default function MainHeader() {
             placeholder="Search In here"
             className={classes.Input}
           />
-
           <Link href="/" className={classes.searchBtn} aria-label="Search">
             <Image src="/Search.png" alt="" width={35} height={32} />
           </Link>

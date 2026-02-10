@@ -1,19 +1,15 @@
 .section {
   width: 100%;
-
   max-width: 1200px;
   min-height: 140px;
   opacity: 1;
-  margin-top: 120px;
-  margin-left: 120px;
+  margin-top: 60px;
+  padding: 0 16px;
 }
 
 .label {
   opacity: 1;
-
-  margin-left: 467px;
-  margin-bottom: 60px;
-
+  margin-bottom: 40px;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 700;
   font-size: 19px;
@@ -21,51 +17,116 @@
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #ff9140;
+  text-align: center;
 }
 
 .container {
   max-width: 1200px;
   min-height: 56px;
-  margin-top: 60px;
+  margin-top: 40px;
 }
+
 .list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
-}
-.list1 {
-  width: 200px;
-  height: 54px;
-  opacity: 1;
-
-  margin-right: 42px;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
 }
 
-.list2 {
-  width: 208px;
-  height: 54px;
-  opacity: 1;
-
-  margin-right: 42px;
-}
-.list3 {
-  width: 200px;
-  height: 54px;
-  opacity: 1;
-
-  margin-right: 42px;
-}
-
-.list4 {
-  width: 208px;
-  height: 54px;
-  opacity: 1;
-
-  margin-right: 42px;
-}
-
+.list1,
+.list2,
+.list3,
+.list4,
 .list5 {
-  width: 216px;
+  flex: 0 1 auto;
+  max-width: 200px;
   height: 54px;
+  opacity: 1;
+}
 
-  margin-right: 42px;
+.list1 img,
+.list2 img,
+.list3 img,
+.list4 img,
+.list5 img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .section {
+    margin-top: 48px;
+  }
+
+  .label {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  .list {
+    gap: 20px;
+  }
+
+  .list1,
+  .list2,
+  .list3,
+  .list4,
+  .list5 {
+    max-width: 140px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    margin-top: 40px;
+  }
+
+  .label {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .list {
+    gap: 16px;
+  }
+
+  .list1,
+  .list2,
+  .list3,
+  .list4,
+  .list5 {
+    max-width: 120px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 380px) {
+  .section {
+    margin-top: 32px;
+    padding: 0 12px;
+  }
+
+  .label {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .list {
+    gap: 12px;
+  }
+
+  .list1,
+  .list2,
+  .list3,
+  .list4,
+  .list5 {
+    max-width: 90px;
+    height: 28px;
+  }
 }

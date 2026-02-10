@@ -1,22 +1,25 @@
 .container {
-  width: 1440px;
-  height: 980px;
+  width: 100%;
+  min-height: 980px;
   opacity: 1;
   background: #eff6ff;
   margin-top: 60px;
+  padding: 60px 24px 80px;
 }
 
 .leftSection {
   max-width: 616px;
+  width: 100%;
   min-height: 170px;
   opacity: 1;
-  padding-left: 120px;
-  padding-top: 100px;
+  padding-left: 0;
+  padding-top: 0;
 }
 
 .labelDiv {
-  width: 616px;
-  height: 24px;
+  width: 100%;
+  max-width: 616px;
+  min-height: 24px;
   opacity: 1;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 700;
@@ -28,8 +31,9 @@
 }
 
 .headingDiv {
-  width: 616px;
-  height: 116px;
+  width: 100%;
+  max-width: 616px;
+  min-height: 116px;
   opacity: 1;
   margin-top: 30px;
 }
@@ -37,8 +41,8 @@
 .headingLine {
   font-family: "Source Serif Pro", serif;
   font-weight: 600;
-  font-size: 46px;
-  line-height: 1;
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.2;
   letter-spacing: 0.02em;
   text-transform: capitalize;
 }
@@ -46,8 +50,8 @@
 .headingHighlight {
   font-family: "Source Serif Pro", serif;
   font-weight: 600;
-  font-size: 46px;
-  line-height: 1;
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.2;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: #2563eb;
@@ -57,32 +61,38 @@
 .rightSection {
   display: flex;
   margin-top: 80px;
-  margin-left: 96px;
 }
+
 .orbitDiv {
-  width: 472px;
-  height: 410px;
+  width: 100%;
+  max-width: 472px;
+  height: auto;
   opacity: 1;
-  margin-top: 80px;
-  margin-left: 96px;
+  margin: 40px auto 0;
+}
+
+.orbitDiv img {
+  width: 100%;
+  height: auto;
 }
 
 .cardsWrapper {
   display: grid;
-  grid-template-columns: repeat(2, 306px);
-  grid-template-rows: repeat(2, 270px);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 32px;
-  justify-content: start;
-  margin-left: 650px;
+  margin-top: -200px;
   position: relative;
-  top: -450px;
+  z-index: 1;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cardBox {
-  width: 306px;
-  height: 270px;
+  width: 100%;
+  min-height: 270px;
   opacity: 1;
-  margin-top: 40px;
+  margin-top: 0;
 }
 
 .card {
@@ -132,15 +142,13 @@
 .text {
   font-family: "DM Sans", sans-serif;
   font-weight: 300;
-  font-style: Light;
   font-size: 15px;
-
   line-height: 1.2;
   letter-spacing: 0.02em;
   vertical-align: middle;
-  width: 251px;
-  height: 60px;
-
+  width: 100%;
+  max-width: 251px;
+  min-height: 60px;
   opacity: 1;
   color: #142349;
   margin-top: 20px;
@@ -196,4 +204,71 @@
 
 .cardsWrapper > .cardBox:nth-child(4) {
   transform: translateY(-30px);
+}
+
+@media (max-width: 900px) {
+  .cardsWrapper {
+    margin-top: 24px;
+  }
+
+  .cardsWrapper > .cardBox:nth-child(n) {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 16px 60px;
+    min-height: auto;
+  }
+
+  .labelDiv {
+    font-size: 16px;
+  }
+
+  .headingLine,
+  .headingHighlight {
+    font-size: 32px;
+  }
+
+  .cardsWrapper {
+    grid-template-columns: 1fr;
+    margin-top: 32px;
+  }
+
+  .card .text {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin-top: 40px;
+    padding: 32px 16px 48px;
+  }
+
+  .headingLine,
+  .headingHighlight {
+    font-size: 26px;
+  }
+
+  .card .text {
+    max-width: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    padding: 24px 12px 40px;
+  }
+
+  .headingLine,
+  .headingHighlight {
+    font-size: 22px;
+  }
+
+  .labelDiv {
+    font-size: 14px;
+  }
 }

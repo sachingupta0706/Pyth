@@ -13,32 +13,65 @@ html {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-family: "DM Sans", sans-serif;
   font-family: "Source Serif Pro", serif;
-
   background: #ffffff;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   width: 100%;
-
+  min-width: 0;
   min-height: 100vh;
   overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
   max-width: 1440px;
   width: 100%;
-
+  min-width: 0;
   min-height: 100vh;
-
   margin: 0 auto;
+  padding: 0 12px;
+}
+
+@media (min-width: 400px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 48px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding: 0 80px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    padding: 0 120px;
+  }
 }
 
 .mainheader {
   width: 100%;
-
-  max-width: 1440px;
-  min-height: 1041px;
-
+  max-width: 100%;
+  min-height: auto;
   opacity: 1;
   background: #eff6ff;
 }
